@@ -1,0 +1,26 @@
+dataset:
+  n_items: 1000
+  n_users: 100
+  interactions_per_user: 50
+
+models:
+  cosine_similarity: true
+  knn: true
+  faiss: true
+  pca: true
+  knn_neighbors: 10
+  knn_metric: "cosine"
+  faiss_index_type: "IndexFlatIP"
+  pca_components: 20
+
+evaluation:
+  k_values: [5, 10, 20]
+  test_size: 0.2
+  val_size: 0.1
+
+audio:
+  sample_rate: 22050
+  n_mfcc: 13
+  n_mels: 128
+  hop_length: 512
+  n_fft: 2048
